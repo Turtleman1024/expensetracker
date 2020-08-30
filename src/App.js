@@ -4,11 +4,12 @@ import Balance from './components/Balance';
 import Summary from './components/Summary';
 import TransactionList from './components/TransactionList';
 import AddTranaction from './components/AddTranaction';
+import { GlobalProvider } from './context/GlobalState';
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Header title='Expense Tracker' />
       <div className='container'>
         <Balance />
@@ -16,7 +17,7 @@ function App() {
         <TransactionList />
         <AddTranaction />
       </div>
-    </div>
+    </GlobalProvider>
   );
 }
 
